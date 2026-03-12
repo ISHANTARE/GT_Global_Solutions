@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtn = document.querySelector('.carousel-prev');
   const nextBtn = document.querySelector('.carousel-next');
   let carouselIndex = 0;
+  let carouselInterval;
 
   function getCardsPerView() {
     if (window.innerWidth >= 1024) return 3;
@@ -114,27 +115,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const perView = getCardsPerView();
     const maxIndex = Math.max(0, cards.length - perView);
     carouselIndex = Math.min(carouselIndex, maxIndex);
-    const pct = (carouselIndex / cards.length) * 100;
+    const pct = carouselIndex * (100 / perView);
     track.style.transform = `translateX(-${pct}%)`;
   }
 
-  prevBtn?.addEventListener('click', () => { carouselIndex = Math.max(0, carouselIndex - 1); updateCarousel(); });
-  nextBtn?.addEventListener('click', () => {
-    const perView = getCardsPerView();
-    const maxIndex = Math.max(0, cards.length - perView);
-    carouselIndex = Math.min(maxIndex, carouselIndex + 1);
-    updateCarousel();
-  });
-  window.addEventListener('resize', updateCarousel);
+  function startCarouselAutoPlay() {
+    stopCarouselAutoPlay();
+    if (cards.length > 0) {
+      carouselInterval = setInterval(() => {
+        const perView = getCardsPerView();
+        const maxIndex = Math.max(0, cards.length - perView);
+        carouselIndex = carouselIndex >= maxIndex ? 0 : carouselIndex + 1;
+        updateCarousel();
+      }, 5000);
+    }
+  }
 
-  // Auto-play carousel
-  if (cards.length > 0) {
-    setInterval(() => {
+  function stopCarouselAutoPlay() {
+    if (carouselInterval) clearInterval(carouselInterval);
+  }
+
+  if (track && cards.length > 0) {
+    prevBtn?.addEventListener('click', () => {
+      carouselIndex = Math.max(0, carouselIndex - 1);
+      updateCarousel();
+      startCarouselAutoPlay(); // Reset timer on interaction
+    });
+
+    nextBtn?.addEventListener('click', () => {
       const perView = getCardsPerView();
       const maxIndex = Math.max(0, cards.length - perView);
-      carouselIndex = carouselIndex >= maxIndex ? 0 : carouselIndex + 1;
+      carouselIndex = Math.min(maxIndex, carouselIndex + 1);
       updateCarousel();
-    }, 4000);
+      startCarouselAutoPlay(); // Reset timer on interaction
+    });
+
+    window.addEventListener('resize', () => {
+      updateCarousel();
+    });
+
+    // Initialize
+    updateCarousel();
+    startCarouselAutoPlay();
   }
 
   /* ---------- FAQ Accordion ---------- */

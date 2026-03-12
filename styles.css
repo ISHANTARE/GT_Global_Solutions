@@ -179,9 +179,9 @@ h1,h2,h3,h4,h5,h6{font-family:'Poppins',sans-serif;color:var(--navy);line-height
 
 /* ---------- Testimonial Carousel ---------- */
 .testimonial-carousel{position:relative;overflow:hidden}
-.testimonial-track{display:flex;transition:transform .6s ease}
-.testimonial-card{min-width:100%;padding:0 15px;box-sizing:border-box}
-.testimonial-card-inner{background:var(--white);border-radius:var(--radius-lg);padding:40px;box-shadow:var(--shadow);border:1px solid var(--gray-100);position:relative}
+.testimonial-track{display:flex;transition:transform .6s ease;width:100%;flex-wrap:nowrap}
+.testimonial-card{flex: 0 0 100%;padding:0 15px;box-sizing:border-box;display:flex}
+.testimonial-card-inner{background:var(--white);border-radius:var(--radius-lg);padding:40px;box-shadow:var(--shadow);border:1px solid var(--gray-100);position:relative;flex:1;display:flex;flex-direction:column}
 .testimonial-card-inner::before{content:'\201C';font-family:'Poppins',sans-serif;font-size:5rem;color:var(--gold);opacity:.2;position:absolute;top:10px;left:24px;line-height:1}
 .testimonial-stars{color:var(--gold);font-size:.9rem;margin-bottom:16px}
 .testimonial-card-inner p{color:var(--gray-600);font-style:italic;margin-bottom:24px;font-size:1.02rem;position:relative;z-index:1}
@@ -196,10 +196,10 @@ h1,h2,h3,h4,h5,h6{font-family:'Poppins',sans-serif;color:var(--navy);line-height
 
 /* ---------- Multi-card carousel for desktop ---------- */
 @media(min-width:768px){
-  .testimonial-card{min-width:50%}
+  .testimonial-card{flex: 0 0 50%}
 }
 @media(min-width:1024px){
-  .testimonial-card{min-width:33.333%}
+  .testimonial-card{flex: 0 0 33.333%}
 }
 
 /* ---------- FAQ ---------- */
