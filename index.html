@@ -1,134 +1,527 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GT Global Solutions | Export & Import</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GT Global Solutions LLP</title>
+  <meta name="description"
+    content="GT Global Solutions LLP India's trusted export-import company connecting businesses globally with quality products and reliable supply chain solutions.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>GTGS</text></svg>">
 </head>
 
 <body>
 
-    <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919890501906"
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="Chat on WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-        <path d="M12 2C6.48 2 2 6.48 2 12c0 1.93.54 3.74 1.48 5.29L2 22l4.83-1.46A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.61 0-3.12-.39-4.45-1.13l-.32-.18-2.86.87.91-2.78-.2-.34A7.94 7.94 0 014 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/>
-        <path d="M17.19 14.53c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.44-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.99 2.66 1.13 2.84c.14.18 1.95 2.98 4.73 4.18.66.29 1.18.46 1.58.59.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
-    </svg>
-</a>
-
-<!-- Cursor Follower -->
-<div class="cursor-dot"></div>
-
-<script>
-    const cursor = document.querySelector('.cursor-dot');
-
-    let mouseX = 0, mouseY = 0;
-    let currentX = 0, currentY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    function animateCursor() {
-        currentX += (mouseX - currentX) * 0.12;
-        currentY += (mouseY - currentY) * 0.12;
-
-        cursor.style.left = currentX + 'px';
-        cursor.style.top = currentY + 'px';
-
-        requestAnimationFrame(animateCursor);
-    }
-
-    animateCursor();
-</script>
-
-<header class="hero">
-    <div class="container fade-in">
-        <img src="final_logo_GT.png" alt="GT Global Solutions Logo" class="logo">
-        <p class="tagline">Connecting Markets, Delivering Trust</p>
-    </div>
-</header>
-
-<section class="about slide-up">
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
     <div class="container">
-        <h2>Who We Are</h2>
-        <p>
-            GT Global Solutions is an export and import business facilitating seamless international
-            trade across global markets. We specialize in reliable sourcing, efficient logistics,
-            and compliant cross-border operations to help businesses trade with confidence.
-        </p>
-    </div>
-</section>
-
-<section class="services slide-up">
-    <div class="container grid">
-        <div class="card">
-            <h3>Exports</h3>
-            <p>Supplying quality products to global markets with complete documentation support.</p>
+      <div class="top-bar-left">
+        <a href="tel:+919890501906"><i class="fas fa-phone"></i> +91 98905 01906</a>
+        <a href="mailto:info@gtglobalsolutions.in"><i class="fas fa-envelope"></i> info@gtglobalsolutions.in</a>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
         </div>
-        <div class="card">
-            <h3>Imports</h3>
-            <p>Reliable sourcing from international suppliers with smooth customs clearance.</p>
+        <div class="lang-dropdown">
+          <button class="lang-btn"><i class="fas fa-globe"></i> English <i class="fas fa-chevron-down"></i></button>
+          <div class="lang-menu">
+            <a href="#">English</a>
+            <a href="#">FranÃ§ais</a>
+            <a href="#">Deutsch</a>
+            <a href="#">æ—¥æœ¬èªž</a>
+          </div>
         </div>
-        <div class="card">
-            <h3>Trade Compliance</h3>
-            <p>Strict adherence to international trade laws, customs norms, and regulations.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="GTGS-logo.png" alt="GT Global Solutions Logo"></a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Products</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="search-toggle" aria-label="Search"><i class="fas fa-search"></i></button>
+        <div class="mobile-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
         </div>
+      </div>
     </div>
-</section>
+  </header>
 
-<section class="status slide-up">
+  <!-- Search Overlay -->
+  <div class="search-overlay">
+    <div class="search-close"><i class="fas fa-times"></i></div>
+    <div class="search-overlay-inner">
+      <input type="text" placeholder="Search products, services, pages...">
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active">
+        <img src="images/cover_background.png" alt="Global Shipping">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-slide">
+        <img src="images/cover_background.png" alt="Container Port">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-slide">
+        <img src="images/cover_bg_new.png" alt="International Trade">
+        <div class="hero-overlay"></div>
+      </div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge"><i class="fas fa-shield-halved"></i> Trusted Partner: 5+ years of trading expertise</div>
+      <h1>Connecting Markets, <span>Delivering Trust</span></h1>
+      <p>GT Global Solutions LLP is an export-import enterprise connecting Indian manufacturers with global markets
+        across 5+ international regions.</p>
+      <div class="hero-btns">
+        <a href="products.html" class="btn btn-primary"><i class="fas fa-box-open"></i> Explore Products</a>
+        <a href="contact.html" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Request a Quote</a>
+      </div>
+    </div>
+    <div class="hero-dots">
+      <div class="hero-dot active"></div>
+      <div class="hero-dot"></div>
+      <div class="hero-dot"></div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <section class="section">
     <div class="container">
-        <h2>Website Under Development</h2>
-        <p>
-            Our full website is currently under development and will be launching soon.
-            For trade inquiries and partnerships, please contact us below.
-        </p>
+      <div class="intro-grid">
+        <div class="intro-img reveal-left">
+          <img src="images/about_company.png" alt="GT Global Solutions Warehouse">
+          <div class="intro-img-badge"><i class="fas fa-award"></i> 5+ Years of Trading Expertise</div>
+        </div>
+        <div class="intro-content reveal-right">
+          <h2>Your Reliable Partner in <span class="text-gold">Global Trade</span></h2>
+          <p>GT Global Solutions LLP is an export-import enterprise connecting Indian manufacturers with global markets.
+            The company specializes in reliable sourcing, efficient logistics, and compliant cross-border operations
+            across diverse product categories.</p>
+          <p>Established in 2025 after more than five years of domestic trading experience, GT Global Solutions focuses
+            on building trusted international partnerships through quality products, competitive pricing, and
+            transparent business practices.</p>
+          <a href="about.html" class="btn btn-navy"><i class="fas fa-arrow-right"></i> Learn More About Us</a>
+          <div class="intro-stats">
+            <div class="stat">
+              <h3 data-count="5" data-suffix="+">0</h3>
+              <p>International Regions</p>
+            </div>
+            <div class="stat">
+              <h3 data-count="5" data-suffix="+">0</h3>
+              <p>Years of Trading Expertise</p>
+            </div>
+            <div class="stat">
+              <h3 data-count="6" data-suffix="">0</h3>
+              <p>Diverse Product Categories</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="contact fade-in">
+  <!-- ===== SERVICES OVERVIEW ===== -->
+  <section class="section bg-off-white">
     <div class="container">
-        <h2>Contact Us</h2>
-
-        <p>
-            <strong>Email:</strong>
-            <a href="mailto:info@gtglobalsolutions.in">info@gtglobalsolutions.in</a>
-        </p>
-
-        <p>
-            <strong>Phone:</strong>
-            <a href="tel:+919890501906">+91 9890501906</a> |
-            <a href="tel:+919662386033">+91 9662386033</a>
-        </p>
-
-        <p><strong>Location:</strong> Pune, Maharashtra, India</p>
-
-        <form class="inquiry-form"
-              action="mailto:info@gtglobalsolutions.in?subject=New%20Trade%20Inquiry%20-%20GT%20Global%20Solutions"
-              method="post"
-              enctype="text/plain">
-
-            <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="Email" placeholder="Your Email" required>
-            <textarea name="Message" rows="4" placeholder="Your Inquiry" required></textarea>
-            <button type="submit">Send Inquiry</button>
-        </form>
+      <div class="section-header reveal">
+        <h2>Our Services</h2>
+        <p>Comprehensive trade solutions tailored to your business needs</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-ship"></i></div>
+          <h3>Export Services</h3>
+          <p>Complete export supply with competitive pricing to key international markets like Europe, Africa, US, and
+            Middle East.</p>
+          <a href="services.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-plane-arrival"></i></div>
+          <h3>Import Services</h3>
+          <p>Providing global sourcing supplies to Indian customers. We ensure all documentation & compliance
+            transparency.</p>
+          <a href="services.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-truck-fast"></i></div>
+          <h3>Domestic Services</h3>
+          <p>Sourcing & procurement across India's manufacturing hubs for reliable domestic supply chain solutions.</p>
+          <a href="services.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+          <h3>Custom Sourcing</h3>
+          <p>OEM & custom branding as per customer requirements worldwide with customized product configurations.</p>
+          <a href="services.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<footer>
+  <!-- ===== IMPORT HIGHLIGHT ===== -->
+  <section class="section-sm">
     <div class="container">
-        <p>© 2025 GT Global Solutions. All rights reserved.</p>
+      <div class="highlight-banner reveal">
+        <div class="icon-wrap"><i class="fas fa-globe"></i></div>
+        <div>
+          <h3 style="color:var(--gold)">Need to Import Specific Items?</h3>
+          <p>We can help source and deliver products from across the globe. Whether it's raw materials, machinery, or
+            consumer goods â€” our global sourcing network ensures competitive pricing and reliable delivery. <a
+              href="contact.html" style="color:var(--gold);font-weight:600;">Contact us for custom import solutions
+              â†’</a></p>
+        </div>
+      </div>
     </div>
-</footer>
+  </section>
 
+  <!-- ===== DOMESTIC HIGHLIGHT ===== -->
+  <section class="section-sm" style="padding-top:0">
+    <div class="container">
+      <div class="highlight-banner reveal" style="background:linear-gradient(135deg,var(--gold-dark),var(--gold))">
+        <div class="icon-wrap" style="background:rgba(10,22,40,.15)"><i class="fas fa-truck"
+            style="color:var(--navy)"></i></div>
+        <div>
+          <h3 style="color:var(--navy)">Domestic Trade & Supply Chain</h3>
+          <p style="color:var(--gray-300);opacity:.8">We also offer Domestic trade and supply chain services across
+            India ï¿½ from sourcing and warehousing to last-mile delivery. <a href="services.html"
+              style="color:var(--navy);font-weight:700">Explore Domestic Services ?</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT CATALOG CTA ===== -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="catalog-cta reveal">
+        <h3>Download Our Product Catalog</h3>
+        <p>Browse our complete range of export-ready products with specifications and pricing.</p>
+        <a href="#" class="btn btn-navy"><i class="fas fa-download"></i> Download Catalog (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section bg-off-white">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>What Our Clients Say</h2>
+        <p>Hear from businesses around the world who trust GT Global Solutions</p>
+      </div>
+      <div class="testimonial-carousel reveal">
+        <div class="testimonial-track">
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"GT Global Solutions has been our most reliable supplier for premium Indian spices. Their quality
+                consistency and timely delivery are unmatched in the industry."</p>
+              <div class="testimonial-author">
+                <img src="https://ui-avatars.com/api/?name=James+Wilson&background=0a1628&color=d4a843&size=100"
+                  alt="James Wilson">
+                <div class="testimonial-author-info">
+                  <h4>James Wilson</h4>
+                  <span>CEO, Spice World Trading â€” UK</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"Outstanding service! They sourced exactly what we needed from India â€” high-quality textiles at very
+                competitive prices. Their team is professional and responsive."</p>
+              <div class="testimonial-author">
+                <img src="https://ui-avatars.com/api/?name=Sakura+Tanaka&background=0a1628&color=d4a843&size=100"
+                  alt="Sakura Tanaka">
+                <div class="testimonial-author-info">
+                  <h4>Sakura Tanaka</h4>
+                  <span>Procurement Head, Tanaka Textiles â€” Japan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
+              <p>"Working with GT Global Solutions for our industrial equipment imports has been a game-changer. Their
+                expertise in trade compliance and logistics is impeccable."</p>
+              <div class="testimonial-author">
+                <img src="https://ui-avatars.com/api/?name=Hans+Mueller&background=0a1628&color=d4a843&size=100"
+                  alt="Hans Mueller">
+                <div class="testimonial-author-info">
+                  <h4>Hans Mueller</h4>
+                  <span>Director, Mueller Industries â€” Germany</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"From inquiry to delivery, GT Global Solutions made the entire process smooth. Their handicraft
+                products were exquisite, and packaging was top-notch!"</p>
+              <div class="testimonial-author">
+                <img src="https://ui-avatars.com/api/?name=Marie+Dupont&background=0a1628&color=d4a843&size=100"
+                  alt="Marie Dupont">
+                <div class="testimonial-author-info">
+                  <h4>Marie Dupont</h4>
+                  <span>Buyer, Maison DÃ©cor â€” France</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"Exceptional quality agricultural products every time. GT Global Solutions' attention to food safety
+                standards and certifications gives us complete confidence."</p>
+              <div class="testimonial-author">
+                <img src="https://ui-avatars.com/api/?name=Ahmed+Al+Rashid&background=0a1628&color=d4a843&size=100"
+                  alt="Ahmed Al Rashid">
+                <div class="testimonial-author-info">
+                  <h4>Ahmed Al Rashid</h4>
+                  <span>MD, Gulf Foods FZCO â€” UAE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
+              <p>"We've been importing agricultural products from GT Global Solutions for 3 years. They consistently
+                deliver quality at scale. A truly dependable partner."</p>
+              <div class="testimonial-author">
+                <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=0a1628&color=d4a843&size=100"
+                  alt="Sarah Johnson">
+                <div class="testimonial-author-info">
+                  <h4>Sarah Johnson</h4>
+                  <span>VP Operations, FreshHarvest â€” USA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn carousel-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn carousel-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <p class="testimonial-note">* AI-generated sample reviews for demonstration purposes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about our services</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <div class="faq-question">What products do you export? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">We export a diverse range of products including agricultural goods (rice,
+              spices, tea, coffee), textiles & garments, industrial machinery, handicrafts & home dÃ©cor, food products,
+              and more. Our product portfolio is constantly expanding to meet global demand.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">Which countries do you export to? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">We currently export to 50+ countries across North America, Europe, Middle
+              East, Africa, Southeast Asia, and Australia. Our key markets include the USA, UK, Germany, UAE, Japan, and
+              Australia. We are continuously expanding our global footprint.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">What are your payment terms? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">We offer flexible payment terms including Advance Payment (T/T), Letter of
+              Credit (L/C), Documentary Collection (D/P, D/A), and PayPal for smaller orders. Payment terms are
+              negotiable based on order volume and business relationship history.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">Do you offer CIF/FOB/EXW shipping? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes, we offer all major Incoterms including FOB (Free on Board), CIF (Cost,
+              Insurance & Freight), EXW (Ex Works), CFR, and DDP. The shipping terms can be customized based on your
+              requirements and destination.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">How can I request a quote? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">You can request a quote through our Contact Us page, by emailing
+              info@globaltradeexports.com, or by calling us directly. Please include product details, quantity
+              requirements, destination, and preferred Incoterms for a faster response.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">What certifications do you have? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">We hold an Import Export Code (IEC) from DGFT, GST Registration, MCCI
+              Membership (Merchants Chamber of Commerce & Industry), and additional trade body certifications. Our
+              products comply with international quality and safety standards.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">Do you provide import services as well? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Absolutely! We offer comprehensive import services including sourcing raw
+              materials, machinery, electronics, and consumer goods from international markets. Our global procurement
+              network ensures competitive pricing and quality assurance.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">What is the minimum order quantity? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Minimum order quantities vary by product category. Generally, we accommodate
+              orders from 1 metric ton for agricultural products and from 500 pieces for textiles/handicrafts. Contact
+              us for product-specific MOQ details and we'll be happy to assist.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">How do I track my shipment? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Once your order is shipped, we provide a tracking number and carrier details
+              via email. You can track your shipment in real-time through the carrier's website. Our logistics team also
+              provides regular updates until delivery is confirmed.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">Do you offer domestic supply services? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes, we offer comprehensive domestic trade and supply chain services across
+              India. This includes sourcing, warehousing, inventory management, and last-mile delivery for businesses of
+              all sizes. Contact us for customized domestic supply solutions.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNERS ===== -->
+  <section class="section-sm bg-off-white">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Trusted By</h2>
+        <p>Partnering with leading businesses across the globe</p>
+      </div>
+      <div class="partners-row reveal">
+        <img
+          src="https://ui-avatars.com/api/?name=Partner+1&background=e5e7eb&color=9ca3af&size=120&length=2&font-size=0.33&format=svg"
+          alt="Partner 1">
+        <img
+          src="https://ui-avatars.com/api/?name=Partner+2&background=e5e7eb&color=9ca3af&size=120&length=2&font-size=0.33&format=svg"
+          alt="Partner 2">
+        <img
+          src="https://ui-avatars.com/api/?name=Partner+3&background=e5e7eb&color=9ca3af&size=120&length=2&font-size=0.33&format=svg"
+          alt="Partner 3">
+        <img
+          src="https://ui-avatars.com/api/?name=Partner+4&background=e5e7eb&color=9ca3af&size=120&length=2&font-size=0.33&format=svg"
+          alt="Partner 4">
+        <img
+          src="https://ui-avatars.com/api/?name=Partner+5&background=e5e7eb&color=9ca3af&size=120&length=2&font-size=0.33&format=svg"
+          alt="Partner 5">
+        <img
+          src="https://ui-avatars.com/api/?name=Partner+6&background=e5e7eb&color=9ca3af&size=120&length=2&font-size=0.33&format=svg"
+          alt="Partner 6">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom:16px"><img src="GTGS-logo.png"
+              alt="GT Global Solutions Logo"></a>
+          <p>GT Global Solutions LLP is an export-import enterprise connecting Indian manufacturers with global markets.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size:.6rem"></i> About Us</a></li>
+            <li><a href="products.html"><i class="fas fa-chevron-right" style="font-size:.6rem"></i> Our Products</a>
+            </li>
+            <li></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:.6rem"></i> Services</a></li>
+            <li><a href="testimonials.html"><i class="fas fa-chevron-right" style="font-size:.6rem"></i>
+                Testimonials</a></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:.6rem"></i> Export
+                Solutions</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:.6rem"></i> Import Services</a>
+            </li>
+            <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:.6rem"></i> OEM & Custom
+                Branding</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right" style="font-size:.6rem"></i> Request a Quote</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Subscribe to get the latest updates on products, trade news, and special offers.</p>
+          <form class="footer-subscribe">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <h4 style="margin-top:30px">Office Address</h4>
+          <p><i class="fas fa-map-marker-alt" style="color:var(--gold)"></i> C-902, Park Ivory, Park Street, Wakad,
+            Pune, Maharashtra, India â€” 411057</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        &copy; 2026 GT Global Solutions LLP. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms
+          of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
-
-
