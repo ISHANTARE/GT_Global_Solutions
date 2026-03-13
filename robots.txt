@@ -1,0 +1,8 @@
+# robots.txt for GT Global Solutions LLP
+# https://www.gtglobalsolutions.in
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.gtglobalsolutions.in/sitemap.xml
